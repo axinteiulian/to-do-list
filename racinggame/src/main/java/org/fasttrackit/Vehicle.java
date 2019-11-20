@@ -1,6 +1,9 @@
 package org.fasttrackit;
 
-public class vehicle {
+import java.time.LocalDate;
+import java.util.Date;
+
+public class Vehicle {
 
     // instance variables
     String name;
@@ -10,4 +13,5 @@ public class vehicle {
     double fuelLevel;
     double travelDistance;
     boolean running;
-}
+
+    }
