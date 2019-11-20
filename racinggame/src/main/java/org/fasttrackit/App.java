@@ -81,6 +81,19 @@ public class App
 //example for NullPointerException
 //        Car car4 =  null;
 //        System.out.println(car4.name);
+
+        System.out.println(" Studyng class variables ( static variables)...");
+        Vehicle vehicle1 = new Vehicle();
+        vehicle1.totalCount = 10;
+
+        Vehicle vehicle2 = new Vehicle();
+        vehicle2.totalCount = 20;
+
+        Vehicle.totalCount = 30;
+
+        System.out.println("Total vehicle count:" + vehicle1.totalCount);
+        System.out.println("Total vehicle 2 count:" + vehicle2.totalCount);
+        System.out.println("Total vehicle count:" + Vehicle.totalCount);
     }
 
 

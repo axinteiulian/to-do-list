@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class Vehicle {
+// proprietate de clasa ( class variable)
+
+    static int totalCount;
 
     // instance variables
     String name;
