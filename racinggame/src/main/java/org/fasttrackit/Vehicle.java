@@ -19,6 +19,8 @@ public class Vehicle {
         // partea de sus se numeste semnatura metodei
         System.out.println(name + " is accelerating with" + speed + durationInHours + "h");
 
+
+//local variable ( declared inside a method )
         double distance = speed * durationInHours;
         travelDistance = travelDistance + distance;
         System.out.println("Total travel distance "+ travelDistance);
