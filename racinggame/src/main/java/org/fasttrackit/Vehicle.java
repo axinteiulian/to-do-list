@@ -17,6 +17,10 @@ public class Vehicle {
     double travelDistance;
     boolean running;
 
+    public Vehicle() {
+        totalCount ++;
+    }
+
     public double accelerate(double speed, double durationInHours) {
 
         // partea de sus se numeste semnatura metodei
