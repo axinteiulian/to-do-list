@@ -6,7 +6,7 @@ import java.util.Date;
 public class Vehicle {
 // proprietate de clasa ( class variable)
 
-    static int totalCount;
+   static int totalCount;
 
     // instance variables
     String name;
@@ -23,9 +23,34 @@ public class Vehicle {
 
     public double accelerate(double speed, double durationInHours) {
 
+        double mileagemultiplier = 1;
+
+
         // partea de sus se numeste semnatura metodei
         System.out.println(name + " is accelerating with" + speed + durationInHours + "h");
 
+        if (speed > maxSpeed) {
+            System.out.println("Sorry. Maximum speed exceeded.");
+            return 0;
+        }
+             else if (speed == maxSpeed) ; {
+                System.out.println("Carefu! Max Speed reached");
+                }
+
+
+                if (fuelLevel <= 0) {
+                    System.out.println("You don`t have enough fuel.");
+                    return  0;
+                }
+
+                if(speed > 120) {
+                    System.out.println("Going fast ... you`ll use more fuel.");
+
+                 // incrasing mileage multiplier with percentege of acceleration`s speed
+
+                    mileagemultiplier = speed / 100;
+
+                }
 
 //local variable ( declared inside a method )
         double distance = speed * durationInHours;
@@ -35,10 +60,15 @@ public class Vehicle {
         //same result as the statement about
 //        travelDistance += distance;
 
-        double usedfuel = distance * travelDistance / 100;
-        System.out.println("usedfuel :" + usedfuel);
+        double usedfuelwithStandardMileage = distance * travelDistance / 100;
+        System.out.println("usedfuel :" + usedfuelwithStandardMileage);
 
-        fuelLevel -= usedfuel;
+
+        double usedfuelwithCurrentMileage = usedfuelwithStandardMileage * mileagemultiplier;
+        System.out.println("Used fuel with current mileage : "+ usedfuelwithCurrentMileage);
+
+        fuelLevel -= usedfuelwithCurrentMileage;
+
         System.out.println("Remaing fuel level : "+ fuelLevel);
         return distance;
 
