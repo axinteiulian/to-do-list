@@ -14,6 +14,12 @@ public class App
 
         System.out.println( "Welcome to The Racing Game" );
 
+        Game game = new Game();
+        game.start();
+
+        Game game1 = new Game();
+        game1.start();
+
         Engine carEngine = new Engine();
         carEngine.manufacturer = "Renault";
         carEngine.capacity = 1.5;
