@@ -20,6 +20,9 @@ public class Vehicle {
     public Vehicle() {
         totalCount ++;
     }
+    public double accelerate (double speed) {
+        return accelerate(speed);
+    }
 
     public double accelerate(double speed, double durationInHours) {
 

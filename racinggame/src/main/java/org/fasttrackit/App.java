@@ -17,8 +17,7 @@ public class App
         Game game = new Game();
         game.start();
 
-        Game game1 = new Game();
-        game1.start();
+
 
         Engine carEngine = new Engine();
         carEngine.manufacturer = "Renault";
