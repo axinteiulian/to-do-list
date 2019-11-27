@@ -6,9 +6,11 @@ public class Game {
 
     public void start() {
         System.out.println("Starting game...");
+        int playercount = getNumberofUser();
+        System.out.println(" Number of players "+ playercount);
 
         String vehicleName = getVehicleNameFromUser();
-        
+
 
         System.out.println("Name from user :"+ vehicleName);
 

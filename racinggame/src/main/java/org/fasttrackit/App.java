@@ -25,13 +25,14 @@ public class App
         carEngine.capacity = 1.5;
 
         Car carReference = new Car(carEngine);
-        carReference.name = "Dacia";
-        carReference.color = "red";
-        carReference.mileage = 9.8;
-        carReference.fuelLevel = 60;
-        carReference.maxSpeed = 200;
-        carReference.running = false;
-        carReference.doorCount = 2;
+
+        carReference.setName("Dacia");
+        carReference.setColor("red");
+        carReference.setMileage(9.8);
+        carReference.setFuelLevel(60);
+        carReference.setMaxSpeed(200);
+        carReference.setRunning(false);
+
 
 
 
@@ -46,39 +47,39 @@ public class App
         Mechanic mechanic = new Mechanic();
         mechanic.repairVehicle(carReference);
 
-        System.out.println("Total travel distance after repair:"+ carReference.travelDistance);
+        System.out.println("Total travel distance after repair:"+ carReference.getTravelDistance());
 
 
 
         Car car2 = new Car(carEngine);
-        car2.name = "BMW";
-        car2.mileage = 14;
-        car2.color= null;
+        car2.setName("BMW");
+        car2.setMileage(14);
+        car2.setColor(null);
                                // concatenation = concatenare
         System.out.println(carReference);
-        System.out.println("Fist car name: " + carReference.name);
-        System.out.println(carReference.mileage);
-        System.out.println(carReference.fuelLevel);
-        System.out.println(carReference.travelDistance);
-        System.out.println(carReference.running);
+        System.out.println("Fist car name: " + carReference.getName());
+        System.out.println(carReference.getMileage());
+        System.out.println(carReference.getFuelLevel());
+        System.out.println(carReference.getTravelDistance());
+        System.out.println(carReference.isRunning());
         System.out.println(carReference.doorCount);
 
 
-        System.out.println("Second car name: " + car2.name);
-        System.out.println("Second car name: " + car2.mileage);
-        System.out.println("Second car name: " + car2.fuelLevel);
-        System.out.println("Second car name: " + car2.travelDistance);
-        System.out.println("Second car name: " + car2.running);
+        System.out.println("Second car name: " + car2.getName());
+        System.out.println("Second car name: " + car2.getMileage());
+        System.out.println("Second car name: " + car2.getFuelLevel());
+        System.out.println("Second car name: " + car2.getTravelDistance());
+        System.out.println("Second car name: " + car2.isRunning());
         System.out.println("Second car name: " + car2.doorCount);
 
-          car2.name = "Vw";
-        System.out.println(car2.name);
+          car2.setName("Vw");
+        System.out.println(car2.getName());
 
 
         Car car3 = car2;
-        car3.name = "Audi";
-        System.out.println("car2 name: "+ car2.name);
-        System.out.println("car3 name: " + car3.name);
+        car3.setName("Audi");
+        System.out.println("car2 name: "+ car2.getName());
+        System.out.println("car3 name: " + car3.getName());
 
 
 //        System.out.println("Modulo example:");
