@@ -43,7 +43,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
+        return "task{" +
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", deadline=" + deadline +
