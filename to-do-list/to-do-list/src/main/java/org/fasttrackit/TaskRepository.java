@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskRepository {
-    public void createTask(CreateTaskRequest request) throws SQLException, IOException {
+    public void createTask(CreateTaskRequest request) throws SQLException, IOException, ClassNotFoundException {
 
         //preventing sql injectionby avoiding concatanation
         String sql = "INSERT INTO task (description, deadline) VALUES (?,?)";
@@ -36,7 +36,7 @@ public class TaskRepository {
             }
 
         //delete task
-    public void deleteTask (long id ) throws SQLException, IOException {
+    public void deleteTask (long id ) throws SQLException, IOException, ClassNotFoundException {
 
         //preventing sql injectionby avoiding concatanation
         String sql = "DELETE FROM task WHERE id = ?";
@@ -47,7 +47,7 @@ public class TaskRepository {
             preparedStatement.executeUpdate();
         }
     }
-    public List<Task> getTask () throws IOException, SQLException{
+    public List<Task> getTask () throws IOException, SQLException, ClassNotFoundException {
         String sql ="SELECT id, description, deadline, done FROM task";
 
 try (Connection connection = DataBaseConfiguration.getConnection();
