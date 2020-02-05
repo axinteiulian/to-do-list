@@ -11,6 +11,16 @@ window.ToDoList = {
 
         })
 
+    },
+
+    getTaskRow:function (task) {
+        return `  <tr>
+                <td>${task.decription}</td>
+                <td>${task.deadline}</td>
+                <td><input type="checkbox" data id=${task.id} class="mark-done"/></td>
+                <td><a href="#" data-id="1" class="delete-task" ><i class="fas fa-trash-alt"></i></a></td>
+            </tr>`
+
     }
 
 
