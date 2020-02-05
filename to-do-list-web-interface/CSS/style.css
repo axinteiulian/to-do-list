@@ -2,12 +2,14 @@
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    margin: 30px;
 }
 
 #tasks-table td, #tasks-table th {
     border: 1px solid #ddd;
     padding: 8px;
 }
+
 
 #tasks-table tr:nth-child(even){background-color: #f2f2f2;}
 
