@@ -23,17 +23,22 @@ public class TaskRepository {
             preparedStatement.executeUpdate();
         }
     }//update task
-        public void updateTask (long id, UpdateTaskRequest request) throws SQLException, IOException {
 
-            //preventing sql injectionby avoiding concatanation
-//            String sql = "UPDATE task SET done =? WHERE id=?";
-//
-//            try (Connection connection = DataBaseConfiguration.getConnection();
-//                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-//                preparedStatement.setBoolean(1, request.isDone());
-//                preparedStatement.setLong(2, id);
-//                preparedStatement.executeUpdate();
-            }
+    public void updateTask(long id, UpdateTaskRequest request) throws SQLException, IOException {
+
+        //preventing sql injectionby avoiding concatanation
+        String sql = "UPDATE task SET done =? WHERE id=?";
+
+           try (Connection connection = DataBaseConfiguration.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+               preparedStatement.setBoolean(1, request.isDone());
+               preparedStatement.setLong(2, id);
+               preparedStatement.executeUpdate();
+    } catch (ClassNotFoundException e) {
+               e.printStackTrace();
+           }
+
+    }
 
         //delete task
     public void deleteTask (long id ) throws SQLException, IOException, ClassNotFoundException {

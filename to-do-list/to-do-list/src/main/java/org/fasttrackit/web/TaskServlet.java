@@ -78,7 +78,13 @@ setAccesControlHeaders(resp);
 
 
     }
-//CORS configuration ( Cross Origin Resourse Sharing)
+
+    @Override
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        setAccesControlHeaders(resp);
+    }
+
+    //CORS configuration ( Cross Origin Resourse Sharing)
     private void setAccesControlHeaders(HttpServletResponse resp){
 
         resp.setHeader("Access-Control-Allow-Origin", "*");
