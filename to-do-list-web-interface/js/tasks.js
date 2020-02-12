@@ -14,6 +14,15 @@ window.ToDoList = {
     })
 
     },
+
+    deleteTask: function (id) {
+        $.ajax({
+
+            url:ToDoList.API_BASE_URL + "?id=" + id, method: "DELETE"
+        }).done(function (response) {
+            ToDoList.getTasks();
+
+            ToDoList.displayTasks(JSON.parse(response));
     createTask: function(){
         let descriptionValue = $("#description-field").val();
         let deadlineValue = $("#deadline-field").val();
@@ -116,6 +125,12 @@ window.ToDoList = {
 
     }
 
+    $("#Task-table").delegate(".delete-task", "click", function(event))
+            { event.preventDefault();
+            ToDoList.deleteTask(taskId)
+
+            }
+        }
 };
 
 ToDoList.getTasks();
